@@ -1,38 +1,185 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+  font-weight: bold;
+}
+
+body {
+  background-image: linear-gradient(0, #283048 0%, #859398 100%);
+  min-height: 100vh;
+  scroll-behavior:unset;
+}
+
+header {
   text-align: center;
+  font-size: 1.5rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.form{
+  text-align: center;
+  margin-top: 5rem;
+
+}
+form {
+  display: inline-block;
+  width:50%;
+  background-color:rgba(255, 255, 255, 0.226);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form input {
+  background: rgba(255, 255, 255, 0.637);
+  color:black;
+  font-size: 20px;
+  padding: 5px;
+  border: #859398 ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+form button {
+  border: none;
+  padding-left: 5rem;
+  padding-bottom: 1rem;
+  height: 50px;
+  width: 50px;
+  background: url(https://www.shareicon.net/data/512x512/2016/08/18/809873_add_512x512.png);
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-out;
+}
+form button:hover {
+  cursor: pointer;
+  background: url(https://www.shareicon.net/data/512x512/2016/08/18/809873_add_512x512.png);
+  background-size: 44px;
+  background-repeat: no-repeat; 
+  background-position: center;
+
+}
+form button:hover~#counter p{
+visibility: visible;  
+}
+form   .text{
+  position: relative;
+  left: 8.6rem;
+  text-align: center;
+  color:blue;
+  font-size: 10px;
+  visibility: hidden;
+}
+.msg{
+  white-space:pre-line;
+  position: relative;
+  top:1rem;
+  font-size: 20px;
+  animation:fadeIn 1s ease-in-out;
+  animation-iteration-count: infinite;
+
+}
+
+@keyframes fadeIn {
+  from { 
+    color:rgb(15, 95, 55);
+  }
+  to {
+   color:rgb(14, 71, 40);
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.select {
+  margin-left: 2rem;
+}
+.filter-task {
+  padding: 1rem;
+  font-size: 1.44rem;
+  background: #7e3b60;
+  border: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#list-container {
+  display: inline-block;
+
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  text-align: left;
+  width:50%;
+  background-color:rgba(255, 255, 255, 0.418);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list {
+  display: inline-block;
+  font-size: 1.3rem;
+  padding: 10px;
+  width: 53rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.todo-checkbox {
+  margin-right: 3%;
+  transform : scale(1.5);
+}
+#btntrash{
+  text-align: right;
+  margin-top: -23px;
+  padding-right: 2rem;
+  transition: all 1s ease-in-out;
+  
+}
+#btntrash .text{
+  position:relative;
+  text-align: right;
+  bottom:8px;
+  left:18px;
+  color:blue;
+  font-size: 10px;
+  visibility: hidden;
+ 
+
+  
+}
+.btn-trash {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  height: 40px;
+  width: 40px;
+  background-image:url("https://freepngimg.com/download/recycle/72667-bin-information-icon-cleaner-application-recycle-waste.png");
+  background-size: 30px;
+  background-repeat: no-repeat; 
+  background-position: center;
+  transition: all 0.5s ease-in;
+
+}
+
+.btn-trash:hover {
+  cursor: pointer;
+  background-image:url("https://freepngimg.com/download/recycle/72667-bin-information-icon-cleaner-application-recycle-waste.png");
+  background-size: 35px;
+  background-repeat: no-repeat; 
+  background-position: center;
+  transition: all 0.5s ease;
+}
+#btntrash button:hover~p{
+  visibility: visible;
+}
+#footer{
+  position:relative;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: center;
+  margin-right:1px;
+  color:#0808088c;
+  display: inline-block;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  width:50%;
+  background-color:rgba(255, 255, 255, 0.096);
+  
 }
